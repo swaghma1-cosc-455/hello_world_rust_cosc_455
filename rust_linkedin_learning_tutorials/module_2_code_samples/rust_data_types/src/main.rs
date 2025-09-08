@@ -1,5 +1,7 @@
 fn main() {
-    let x: f32 = 10.123456789123456789;
-    println!("x is {}", x);
+    let a = 10; 
+    let b = 3.0; 
+    let c = a as f64 / b; 
+    println!("c is {}", c);
    
 }
