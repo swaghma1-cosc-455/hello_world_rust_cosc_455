@@ -1,13 +1,7 @@
 fn main() {
-    let a = true; 
-    let b = false; 
-
-    println!("a is {} and b is {}", a, b);
-    println!("a EQUAL TO b is {}", a == b);
-    println!("a NOT EQUAL TO b is {}", a != b);
-    println!("a GREATER THAN b is {}", a > b);
-    println!("a GREATER THAN OR EQUAL TO b is {}", a >= b);
-    println!("a LESS THAN b is {}", a < b);
-    println!("a LESS THAN OR EQUAL TO b is {}", a <= b);
+    let letter = 'a'; 
+    let number = '1';
+    let finger = '\u{261D}'; 
+    println!("{}\n{}\n{}", letter, number, finger); 
 
 }
