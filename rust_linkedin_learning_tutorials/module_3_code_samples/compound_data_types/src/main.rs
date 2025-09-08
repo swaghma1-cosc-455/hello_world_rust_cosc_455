@@ -1,12 +1,12 @@
 fn main() {
-    let mut letters = ['a', 'b', 'c']; 
-    letters[0] = 'x'; 
-    let first_letter = letters[0]; 
-    println!("first_letter is {}", first_letter); 
+    let parking_lot = [[1, 2, 3], 
+                       [4, 5, 6]];
 
-    let numbers: [i32; 5]; 
-    numbers = [0; 5]; 
-    let index: usize = numbers.len() - 1; 
-    println!("last number is {}", numbers[index]); 
+    let number = parking_lot[1][2]; 
+
+    println!("number is {}", number); 
+
+    let garage: [[[0; 100] ; 20]; 5];  
+
     
 }
