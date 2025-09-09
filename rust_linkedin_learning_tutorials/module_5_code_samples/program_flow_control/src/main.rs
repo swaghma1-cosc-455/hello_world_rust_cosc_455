@@ -1,10 +1,15 @@
 fn main() {
-    let mut count = 0; 
-    let letters = ['a', 'b', 'c']; 
+    let message = ['h', 'e', 'l', 'l', 'o']; 
 
-    while count < letters.len() {
-        println!("letter is {}", letters[count]); 
-        count +=1 ; 
+    for (index, &item) in message.iter().enumerate() {
+        println!("item {} is {}", index, item); 
+        if item == 'e' {
+            break; 
+        }
+    }
+
+    for number in 0..5{
+        println!("number is {}", number); 
     }
     
 }
