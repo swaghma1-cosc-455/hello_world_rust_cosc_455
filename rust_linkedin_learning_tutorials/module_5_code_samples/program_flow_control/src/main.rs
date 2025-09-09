@@ -1,12 +1,16 @@
 fn main() {
-    let make_x_odd = true; 
-    let x = if make_x_odd {1} else {2};
+    let mut count = 0; 
 
-    // if make_x_odd {
-    //     x = 1; 
-    // } else {
-    //     //x = 2; 
-    // }
+    let result = loop {
+        if count == 10 {
+            break count * 10; 
+        }
+        count += 1; 
+        println!("count is {}", count); 
+    }; 
 
-    println!("x is {}", x); 
+    println!("After the loop!");
+    println!("result is {}", result);
+
+    
 }
