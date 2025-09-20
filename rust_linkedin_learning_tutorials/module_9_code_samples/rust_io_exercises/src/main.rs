@@ -1,13 +1,14 @@
-use std::env; 
+use std::fs; 
 fn main() {
-    if env::args().len() <= 2{
-        println!("Program requires atleast 2 arguments."); 
-        return; 
-    }
-    for (index, argument) in env::args().enumerate() {
-        println!("argument {} is {}", index, argument); 
+    let contents = fs::read_to_string("planets.txt").unwrap();
+    println!("contents is {}", contents ); 
+
+    for line in contents.lines()
+    {
+        println!("line is {}", line); 
     }
 
-    let arg2 = env::args().nth(2).unwrap(); 
-    println!("arg2 is {}", arg2); 
+    let contents = fs::read("planets.txt").unwrap();
+    println!("contents is {:?}", contents ); 
+
 }
