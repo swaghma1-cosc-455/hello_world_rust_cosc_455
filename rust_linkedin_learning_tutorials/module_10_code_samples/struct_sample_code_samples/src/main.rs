@@ -1,25 +1,40 @@
-#[derive(Debug)]
-#[derive(Clone)]
 
 struct Shuttle{
     name: String, 
     crew_size: u8, 
     propellant: f64, 
 }
+
+impl Shuttle {
+    fn get_name(&self) -> &str {
+        &self.name
+    }
+
+    fn add_fuel(&mut self, gallons: f64) {
+        self.propellant += gallons; 
+    }
+
+    fn new(name: &str) -> Shuttle {
+        Shuttle {
+            name: String::from(name), 
+            crew_size: 7, 
+            propellant: 0.0
+        }
+    }
+}
+
+
 fn main() {
-    let mut vehicle = Shuttle {
-        name: String::from("Endeavour"), 
-        crew_size: 7, 
-        propellant: 835958.0
-    }; 
+    let mut vehicle = Shuttle::new("Endeavour"); 
+    let mut vehicle2 = Shuttle::new("Discovery"); 
 
-    let vehicle2 = Shuttle {
-        ..vehicle.clone()
-    };
+    let vehicle_name = vehicle.get_name(); 
+    println!("vehicle_name is {}", vehicle_name); 
 
-    vehicle.crew_size = 6; 
-    println!("Vehicle is {:?}", vehicle);
+    println!("propellant is {}", vehicle.propellant);
 
-    println!("Vehicle2 is {:?}", vehicle2);
+    vehicle.add_fuel(1000.0); 
+
+    println!("propellant is {}", vehicle.propellant);
 
 }
